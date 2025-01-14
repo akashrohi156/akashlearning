@@ -2,13 +2,91 @@
 <html>
 <head>
     <title>Dynamic Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background: #35424a;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 10px 0;
+        }
+        .action-button {
+            background-color: #e8491d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .action-button:hover {
+            background-color: #c23616;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .feature {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #35424a;
+            color: white;
+        }
+        .container {
+            margin: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .news {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .article {
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .article img {
+            max-width: 150px;
+            border-radius: 5px;
+        }
+        .articlecontent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Our Service</h1>
         <p>Discover the future of online experience.</p>
-        <button class="action-button">Learn More</button>
+        <button class="action-button" onclick="location.href='#news-section'">News</button>
     </header>
 
     <section class="features">
@@ -20,80 +98,28 @@
             <h2>Feature Two</h2>
             <p>Description of Feature Two.</p>
         </div>
-        <!-- More features -->
+    </section>
+
+    <section id="news-section" class="container">
+        <div class="header">
+            <h1>The New York Times</h1>
+            <h6>23/06/2017 Friday</h6>
+        </div>
+        <div class="news">
+            <div class="article big">
+                <img src="https://lh3.googleusercontent.com/M8JvfafrfqoRnprRGxJHbkWG16OG8JoeNtCrcYwBiVYw-cWxN5GgrReRVlzXja3FJqQUJMr0XWbhYuOMiJDKaPJNfr550S2QHAdCJ0Y8IrDI0kHLuYX7VDY-5EtkPu_q9EC1-Ls-tflFgQ3wzRjowPhtfF-VBgzzUup6cqxPtpUSxGHSkn25keHSPCO4QDmwkyGQ5anJu5fPJ7ANTD3sEaYB7kUxduap7qL5rcia67dJpSbsiF_UA1WuPNNnTc_Ab6zw_jDabrsPMF0ZHTse80freR2fatmKEZVs2lnbiDoBaHbzPbfH8kbDwUOx4ytFwJyIk7ktBqItI_SRc3eUqQX1b96E0N4n15C5rS1lXBBGBTYqoZ98cqGRJR8PFsY1G5q7ldM0nZ0Ymb8bf4AcVdK6gCJz4PfKM4wbv0QVEUDO9xkeqkZagTl9x2T-L2YKkQS8uujlTwiGUQSrhBYcy3k4GZm8-9nCGM2JtttAcHGC9AioBayz4dTYwDYgKJVS4TPScrrS9TjpbeMZGew-Jy_MoY1fxYkZTn_5zkf_KvqOpVevM6UO9w50kfmTwaMHgXJxsaxolemhKJQEUApn2CusIOnVyOyaC7f2AiLsMwbh_0DUx1jZZDnGc_fYAudR__2KjjmRtqkCJE0NtvFedsc3ubc1mvlUCHAf1HY7=w883-h662-no" alt="Dog at work">
+                <div class="articlecontent">
+                    <h2>Today Is “National Take Your Dog to Work Day”</h2>
+                    <p>Details about the dog-friendly work environment...</p>
+                </div>
+            </div>
+            <!-- Add more articles here -->
+        </div>
     </section>
 
     <footer>
         <p>© 2023 Dynamic Landing Page. All rights reserved.</p>
     </footer>
-<style>
-    body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f8fb;
-    text-align: center;
-}
-
-header {
-    background-image: url('https://i.imgur.com/RurqKDM.jpg'); /* Add a background image */
-    color: white;
-    padding: 50px 20px;
-    background-size: cover;
-    background-position: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.action-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.action-button:hover {
-    background-color: #0056b3;
-}
-
-.features {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.feature {
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-</style>
 </body>
 </html>
 
